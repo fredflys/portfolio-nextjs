@@ -15,6 +15,7 @@ const TAB_DATA = [
         <li>SQL</li>
         <li>Azure</li>
         <li>Power BI</li>
+        <li>Linux</li>
       </ul>
     ),
   },
@@ -24,11 +25,11 @@ const TAB_DATA = [
     content: (
       <ul>
         <li>
-          2022 - 2024 Master&rsquo;s Degree in Applied Computer Science from
-          Fairleigh Dickinson University - Vancouver Campus{" "}
+          <b>2022 - 2024</b> Master of Science in Applied Computer Science from
+          Fairleigh Dickinson University - Vancouver Campus
         </li>
         <li>
-          2012 - 2016 Bachelor Degree in Liberal Arts from Zhengzhou University
+          <b>2012 - 2016</b> Bachelor of Liberal Arts from Zhengzhou University
           of Light Industry
         </li>
       </ul>
@@ -47,17 +48,18 @@ function About() {
   };
 
   return (
-    <section className="text-white">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+    <section className="text-white" id="about">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ">
         <Image
           src="/images/about-image.jpg"
           alt="about"
           width={500}
           height={500}
+          className=""
         />
         <div className="mt-4 md:mt-8 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="lg:text-lg">This is me. Thank you for taking a look.</p>
+          <p className="lg:text-lg">This is me. </p>
           <div className="flex flex-row mt-8 justify-start">
             <TabButton
               selectTab={() => handleTabChange("skills")}

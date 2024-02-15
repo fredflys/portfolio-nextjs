@@ -45,25 +45,28 @@ const EmailSection = () => {
   };
 
   return (
-    <section className="grid md:grid-cols-2 md:my-12 py-24 gap=4 text-white relative">
+    <section
+      className="grid md:grid-cols-2 md:my-12 py-24 gap=4 text-white relative"
+      id="contact"
+    >
       <div className="absolute w-80 h-80 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full blur-lg top-full -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
       <div>
         <h5 className="text-xl font-bold md:my-10 gap-4">Let&apos;s Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I&apos;m on the lookout for new opportunites and my inbox is always
-          open. Whether you have a question or say hi, I&apos;ll always get back
-          to you as soon as possible. Stay safe!
+          open. Whether you have a question or just want to say hi, I&apos;ll
+          always get back to you as soon as possible.
         </p>
         <div className="social-links flex flex-row gap-2">
-          <Link href={github_link}>
-            <Image src={GithubIcon} alt="Github Icon" height={50} width={50} />
+          <Link href={github_link} className="">
+            <Image src={GithubIcon} alt="Github Icon" height={30} width={30} />
           </Link>
           <Link href={linkedin_link}>
             <Image
               src={LinkedInIcon}
               alt="Linkedin Icon"
-              height={40}
-              width={40}
+              height={30}
+              width={30}
             />
           </Link>
         </div>
@@ -81,7 +84,7 @@ const EmailSection = () => {
               name="email"
               id="email"
               required
-              placeholder="example@example.com"
+              placeholder="example@domain.com"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3"
             ></input>
           </div>
@@ -94,7 +97,7 @@ const EmailSection = () => {
               name="subject"
               id="subject"
               required
-              placeholder="Hi there!"
+              placeholder="Say hi!"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3"
             ></input>
           </div>

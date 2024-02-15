@@ -7,7 +7,7 @@ const ProjectCard = ({ imgUrl, title, desc, gitUrl, previewUrl }) => {
     <div>
       <div
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-        className="h-52 mid:h-72 rounded-t-xl relative group"
+        className="h-40 mid:h-72 rounded-t-xl relative group overflow-hidden"
       >
         {/* overlay for project links */}
         <div
