@@ -9,7 +9,7 @@ const PROJECT_DATA = [
     id: 1,
     title: "Speedy",
     desc: "A command line tool for downloading files from the internet built with Java.",
-    image: `/images/projects/2.png`,
+    image: `/images/projects/1.png`,
     tags: ["All", "Java"],
     gitUrl: "/",
     previewUrl: "/",
@@ -55,7 +55,7 @@ const ProjectSection = () => {
           />
         ))}
       </div>
-      <div className="gird md:grid-cols-3 gap-8 md:gap-12">
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Introduction = () => {
   return (
@@ -11,11 +12,11 @@ const Introduction = () => {
         // Same substring at the start will only be typed out once, initially
         "Yifei",
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        "a web developer",
+        "a Java developer",
         1000,
-        "",
+        "a React user",
         1000,
-        "",
+        "a Python hobbyist",
         1000,
       ]}
       wrapper="span"
@@ -49,8 +50,11 @@ const HeroSection = () => {
           </h1>
           {/* Description */}
           <p className="text-[#ADB7BE] mb-6 text-base sm:text-lg lg:text-xl">
-            This a random paragraph This a random paragraph This a random
-            paragraph This a random paragraph
+            I transitioned into the role of a Power BI developer and software
+            engineer after starting off my career as a software tester. I enjoy
+            using Java to build reliable applications, Python to automates
+            boring yet necessary tasks, and React to craft interactive web
+            experiences.
           </p>
           {/* Buttons */}
           <div>
@@ -60,7 +64,7 @@ const HeroSection = () => {
           w-full sm:w-fit
           bg-gradient-to-br from-primary-500 via-transition-500 to-secondary-500"
             >
-              Hire Me
+              <Link href="#contact">Hire Me</Link>
             </button>
             <button
               className="px-1 py-1 rounded-full
@@ -69,7 +73,7 @@ const HeroSection = () => {
           bg-gradient-to-br from-primary-500 via-transition-500 to-secondary-500"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+                <Link href="/cv.pdf">Download CV</Link>
               </span>
             </button>
           </div>

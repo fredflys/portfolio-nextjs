@@ -51,15 +51,16 @@ function About() {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ">
         <Image
-          src="/images/about-image.jpg"
+          src="/images/about-image.png"
           alt="about"
           width={500}
           height={500}
-          className=""
         />
         <div className="mt-4 md:mt-8 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="lg:text-lg">This is me. </p>
+          <p className="lg:text-lg">
+            I love coding, reading, and watching adult cartoon.{" "}
+          </p>
           <div className="flex flex-row mt-8 justify-start">
             <TabButton
               selectTab={() => handleTabChange("skills")}
@@ -70,6 +71,7 @@ function About() {
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab == "education"}
+              k
             >
               Education
             </TabButton>

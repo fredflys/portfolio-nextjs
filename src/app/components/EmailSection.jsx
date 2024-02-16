@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/images/icons/github-icon.png";
 import LinkedInIcon from "../../../public/images/icons/linkedin-icon.png";
+import LeetcodeIcon from "../../../public/images/icons/leetcode-icon.png";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
   const github_link = "https://github.com/fredflys";
   const linkedin_link = "https://www.linkedin.com/in/fredflys";
+  const leetcode_link = "https://leetcode.com/fredflys/";
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
 
@@ -30,7 +32,9 @@ const EmailSection = () => {
 
     const response = await fetch(endpoint, options);
     if (response.status === 200) {
-      if (!response.error) {
+      console.log("response: ", response);
+      console.log("response.error: ", response.error);
+      if (response.error != undefined) {
         setSent(false);
         setError(true);
       } else {
@@ -55,7 +59,7 @@ const EmailSection = () => {
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I&apos;m on the lookout for new opportunites and my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
-          always get back to you as soon as possible.
+          get back to you as soon as possible.
         </p>
         <div className="social-links flex flex-row gap-2">
           <Link href={github_link} className="">
@@ -64,6 +68,14 @@ const EmailSection = () => {
           <Link href={linkedin_link}>
             <Image
               src={LinkedInIcon}
+              alt="Linkedin Icon"
+              height={30}
+              width={30}
+            />
+          </Link>
+          <Link href={leetcode_link}>
+            <Image
+              src={LeetcodeIcon}
               alt="Linkedin Icon"
               height={30}
               width={30}
