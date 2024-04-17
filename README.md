@@ -1,4 +1,4 @@
-Person Next.js portfolio website.
+Personal Next.js portfolio website.
 
 ## Getting Started
 
